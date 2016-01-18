@@ -34,23 +34,29 @@ List.prototype.reverse = function () {
 
     var curr = this.head;
     var prev = null;
-    var next = curr.next;
+    var next = null;
 
-    while (current) {
-        var tmp = next.next;
-        prev = current;
-        current = next;
-        next = temp;
+    while (curr) {
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
     }
 
-    this.head = current;
+    this.head = prev;
 }
 
 var lst = new List();
 lst.addNode(5);
 lst.addNode(7);
 lst.addNode(4);
+lst.addNode(9);
+lst.addNode(8);
+lst.addNode(3);
 
 lst.print();
+console.log("------REVERSE-------");
 
+lst.reverse();
+lst.print();
 
