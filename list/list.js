@@ -16,7 +16,7 @@ var LinkedList = function () {
             current.next = new Node(value);
         }
         this.count++;
-    }
+    };
 
     this.print = function () {
         var current = this.head;
@@ -24,7 +24,8 @@ var LinkedList = function () {
             console.log(current.data);
             current = current.next;
         }
-    }
+    };
+
 }
 
 var lst = new LinkedList();
