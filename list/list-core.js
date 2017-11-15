@@ -6,7 +6,7 @@ list.addNode = function (value) {
 
     if (lst.count === 0) { lst.head = node; }
     else {
-        
+        lst.next = node;
     }
 };
 
